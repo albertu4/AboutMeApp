@@ -18,9 +18,9 @@ class PictureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\(firstProfile.person.name) \(firstProfile.person.surname)"
-        
-        firstPicture.image = firstProfile.person.pictures[0]
-        secondPicture.image = firstProfile.person.pictures[1]
-        thirdPicture.image = firstProfile.person.pictures[2]
+//        
+//        firstPicture.image = firstProfile.person.pictures[0]
+//        secondPicture.image = firstProfile.person.pictures[1]
+//        thirdPicture.image = firstProfile.person.pictures[2]
     }
 }

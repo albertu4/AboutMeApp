@@ -16,6 +16,25 @@ class LoginViewController: UIViewController {
     //MARK: - Private properties
     private let firstProfile = User.getPersonInfo()
     
+    private let primaryColor = UIColor(
+        red: 107/255,
+        green: 148/255,
+        blue: 220/255,
+        alpha: 1
+    )
+    
+    private let secondaryColor = UIColor(
+        red: 30/255,
+        green: 40/255,
+        blue: 60/255,
+        alpha: 1
+    )
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+    }
+    
     //MARK: - IBActions
     @IBAction func loginButtonPressed() {
         if usernameTF.text != firstProfile.login ||
@@ -43,7 +62,7 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
         
-        for viewController in tabBarController.viewControllers! {
+        for viewController in tabBarController.children {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.firstProfile = firstProfile
             } else if let navigationVC =

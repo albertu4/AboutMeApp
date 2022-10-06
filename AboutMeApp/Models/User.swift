@@ -5,8 +5,6 @@
 //  Created by Михаил Иванов on 24.01.2022.
 //
 
-import UIKit
-
 struct User {
     let login: String
     let password: String
@@ -17,18 +15,16 @@ struct User {
             login: "User",
             password: "123",
             person: Person(
-                name: "Mikhail",
-                surname: "Ivanov",
-                dateOfBirth: "27.01.1992",
-                currentLocation: "Yakutsk",
-                education: "MSTUCA",
-                job: "ATC",
-                hobbies: ["Running", "Playing the guitar", "Traveling"],
-                pictures: [
-                    UIImage(named: "winter")!,
-                    UIImage(named: "nature")!,
-                    UIImage(named: "foods")!
-                ]
+                name: "Peter",
+                surname: "Parker",
+                userStatus: "Remember, with great power comes great responsibility",
+                dateOfBirth: "10.08.2001",
+                relationShip: "In relationship",
+                currentLocation: "New - York",
+                education: "Empire State University",
+                job: "Daily Bugle",
+                photo: "peterParker",
+                picture: "spiderManLogo"
             )
         )
     }
@@ -37,10 +33,12 @@ struct User {
 struct Person {
     let name: String
     let surname: String
+    let userStatus: String
     let dateOfBirth: String
+    let relationShip: String
     let currentLocation: String
     let education: String
     let job: String
-    let hobbies: [String]
-    let pictures: [UIImage]
+    let photo: String
+    let picture: String
 }

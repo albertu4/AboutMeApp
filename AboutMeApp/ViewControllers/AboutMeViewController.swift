@@ -26,11 +26,11 @@ class AboutMeViewController: UIViewController {
         locationOfUser.text = firstProfile.person.currentLocation
         educationOfUser.text = firstProfile.person.education
         jobOfUser.text = firstProfile.person.job
-        
-        for hobby in firstProfile.person.hobbies {
-            numberOfHobby += 1
-            hobbiesOfUser.text?.append("\(numberOfHobby) - \(hobby)\n")
-        }
+//        
+//        for hobby in firstProfile.person.hobbies {
+//            numberOfHobby += 1
+//            hobbiesOfUser.text?.append("\(numberOfHobby) - \(hobby)\n")
+//        }
     }
     
 }
