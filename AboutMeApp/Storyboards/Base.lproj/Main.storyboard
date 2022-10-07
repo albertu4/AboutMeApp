@@ -443,7 +443,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="peterParker" width="500" height="281"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
-        <image name="spiderManLogo" width="4444" height="2500"/>
+        <image name="spiderManLogo" width="1365" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
