@@ -28,11 +28,28 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Account"
+        navigationItem.title = "Account"
+        
+        setPicturesFrame()
+        loadAccountInfo()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        photoOfUser.layer.cornerRadius = photoOfUser.bounds.height / 2
+    }
+    
+    @IBAction func editStatusOfUser(_ sender: Any) {
+        showAlertWithTF(title: "Change status", and: "What do you feel?")
+    }
+    
+    private func setPicturesFrame() {
         pictureOfPage.layer.cornerRadius = 10
         photoOfUser.layer.borderWidth = 3
         photoOfUser.layer.borderColor = UIColor.lightGray.cgColor
-        
+    }
+    
+    private func loadAccountInfo() {
         pictureOfPage.image = UIImage(named: profile.person.picture)
         photoOfUser.image = UIImage(named: profile.person.photo)
         
@@ -44,22 +61,10 @@ class ProfileViewController: UIViewController {
         userEducation.text = profile.person.education
         userJob.text = profile.person.job
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        photoOfUser.layer.cornerRadius = photoOfUser.bounds.height / 2
-    }
-    
-    @IBAction func editStatusOfUser(_ sender: Any) {
-        showAlert(title: "Change status", and: "What do you feel?")
-    }
-    @IBAction func exitFromProfile(_ sender: Any) {
-        
-    }
 }
 
 extension ProfileViewController {
-    private func showAlert(title: String, and message: String) {
+    private func showAlertWithTF(title: String, and message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)

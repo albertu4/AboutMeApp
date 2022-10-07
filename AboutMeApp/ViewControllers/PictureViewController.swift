@@ -15,10 +15,13 @@ class PictureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Photo Album"
-        
+        navigationItem.title = "Photo Album"
+        loadAccountAlbum()
+    }
+    
+    private func loadAccountAlbum() {
         var iteration = 0
+        
         for image in stackOfImage.arrangedSubviews {
             if let photo = image as? UIImageView {
                 photo.image = UIImage(named: profile.person.photoAlbum[iteration])
@@ -26,4 +29,5 @@ class PictureViewController: UIViewController {
             }
         }
     }
+    
 }
