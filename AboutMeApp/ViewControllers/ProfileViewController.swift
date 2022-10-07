@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  ProfileViewController.swift
 //  AboutMeApp
 //
 //  Created by Михаил Иванов on 24.01.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
    
     @IBOutlet weak var pictureOfPage: UIImageView!
@@ -23,26 +23,26 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var userEducation: UILabel!
     @IBOutlet weak var userJob: UILabel!
     
-    var firstProfile: User!
+    var profile: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "\(firstProfile.person.name) \(firstProfile.person.surname)"
+        title = "\(profile.person.name) \(profile.person.surname)"
         pictureOfPage.layer.cornerRadius = 10
         photoOfUser.layer.borderWidth = 3
         photoOfUser.layer.borderColor = UIColor.lightGray.cgColor
         
-        pictureOfPage.image = UIImage(named: firstProfile.person.picture)
-        photoOfUser.image = UIImage(named: firstProfile.person.photo)
+        pictureOfPage.image = UIImage(named: profile.person.picture)
+        photoOfUser.image = UIImage(named: profile.person.photo)
         
-        userName.text = "\(firstProfile.person.name) \(firstProfile.person.surname)"
-        userStatus.text = firstProfile.person.userStatus
-        userBirthday.text = firstProfile.person.dateOfBirth
-        userRelationship.text = firstProfile.person.relationShip
-        userLocation.text = firstProfile.person.currentLocation
-        userEducation.text = firstProfile.person.education
-        userJob.text = firstProfile.person.job
+        userName.text = "\(profile.person.name) \(profile.person.surname)"
+        userStatus.text = profile.person.userStatus
+        userBirthday.text = profile.person.dateOfBirth
+        userRelationship.text = profile.person.relationShip
+        userLocation.text = profile.person.currentLocation
+        userEducation.text = profile.person.education
+        userJob.text = profile.person.job
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,7 +58,7 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-extension WelcomeViewController {
+extension ProfileViewController {
     private func showAlert(title: String, and message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,

@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: - Private properties
-    private let firstProfile = User.getPersonInfo()
+    private let profile = User.getPersonInfo()
     
     private let primaryColor = UIColor(
         red: 107/255,
@@ -37,8 +37,8 @@ class LoginViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func loginButtonPressed() {
-        if usernameTF.text != firstProfile.login ||
-            passwordTF.text != firstProfile.password {
+        if usernameTF.text != profile.login ||
+            passwordTF.text != profile.password {
             showAlert(title: "Invalid login or password",
                       and: "Please, enter correct name and password")
         }
@@ -46,8 +46,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", and: "Your name is \(firstProfile.login)")
-        : showAlert(title: "Oops!", and: "Your password is \(firstProfile.password)")
+        ? showAlert(title: "Oops!", and: "Your name is \(profile.login)")
+        : showAlert(title: "Oops!", and: "Your password is \(profile.password)")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
@@ -66,16 +66,12 @@ extension LoginViewController {
             if let navigationVC =
                 viewController as? UINavigationController {
                 
-                if let welcomeVC = navigationVC.topViewController as? WelcomeViewController {
-                    welcomeVC.firstProfile = firstProfile
+                if let welcomeVC = navigationVC.topViewController as? ProfileViewController {
+                    welcomeVC.profile = profile
                 }
-                
-                else if let aboutMeVC =
-                            navigationVC.topViewController as? AboutMeViewController {
-                    aboutMeVC.firstProfile = firstProfile
-                } else if let pictureVC =
+                else if let pictureVC =
                             navigationVC.topViewController as? PictureViewController {
-                    pictureVC.firstProfile = firstProfile
+                    pictureVC.profile = profile
                 }
                 
             }

@@ -14,8 +14,7 @@
 		746B4F36279EEAAF00D47CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B4F34279EEAAF00D47CE3 /* Main.storyboard */; };
 		746B4F38279EEAB100D47CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746B4F37279EEAB100D47CE3 /* Assets.xcassets */; };
 		746B4F3B279EEAB100D47CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B4F39279EEAB100D47CE3 /* LaunchScreen.storyboard */; };
-		746B4F44279EEB4200D47CE3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B4F43279EEB4200D47CE3 /* WelcomeViewController.swift */; };
-		746B4F46279EEB5E00D47CE3 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B4F45279EEB5E00D47CE3 /* AboutMeViewController.swift */; };
+		746B4F44279EEB4200D47CE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B4F43279EEB4200D47CE3 /* ProfileViewController.swift */; };
 		746B4F48279EEB7300D47CE3 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B4F47279EEB7300D47CE3 /* PictureViewController.swift */; };
 		746B4F4D279EEC1800D47CE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B4F4C279EEC1800D47CE3 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -30,8 +29,7 @@
 		746B4F37279EEAB100D47CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746B4F3A279EEAB100D47CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		746B4F3C279EEAB100D47CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		746B4F43279EEB4200D47CE3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		746B4F45279EEB5E00D47CE3 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		746B4F43279EEB4200D47CE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		746B4F47279EEB7300D47CE3 /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		746B4F4C279EEC1800D47CE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				746B4F32279EEAAF00D47CE3 /* LoginViewController.swift */,
-				746B4F43279EEB4200D47CE3 /* WelcomeViewController.swift */,
-				746B4F45279EEB5E00D47CE3 /* AboutMeViewController.swift */,
+				746B4F43279EEB4200D47CE3 /* ProfileViewController.swift */,
 				746B4F47279EEB7300D47CE3 /* PictureViewController.swift */,
 			);
 			path = ViewControllers;
@@ -203,8 +200,7 @@
 			files = (
 				746B4F33279EEAAF00D47CE3 /* LoginViewController.swift in Sources */,
 				746B4F48279EEB7300D47CE3 /* PictureViewController.swift in Sources */,
-				746B4F46279EEB5E00D47CE3 /* AboutMeViewController.swift in Sources */,
-				746B4F44279EEB4200D47CE3 /* WelcomeViewController.swift in Sources */,
+				746B4F44279EEB4200D47CE3 /* ProfileViewController.swift in Sources */,
 				7457695B28EEEBD1003C0A03 /* Extension + UIView.swift in Sources */,
 				746B4F2F279EEAAF00D47CE3 /* AppDelegate.swift in Sources */,
 				746B4F31279EEAAF00D47CE3 /* SceneDelegate.swift in Sources */,

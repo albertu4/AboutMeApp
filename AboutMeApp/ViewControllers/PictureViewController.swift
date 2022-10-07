@@ -11,16 +11,16 @@ class PictureViewController: UIViewController {
     
     @IBOutlet weak var stackOfImage: UIStackView!
     
-    var firstProfile: User!
+    var profile: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(firstProfile.person.name) \(firstProfile.person.surname)"
+        title = "\(profile.person.name) \(profile.person.surname)"
         
         var iteration = 0
         for image in stackOfImage.arrangedSubviews {
             if let photo = image as? UIImageView {
-                photo.image = UIImage(named: firstProfile.person.photoAlbum[iteration])
+                photo.image = UIImage(named: profile.person.photoAlbum[iteration])
                 iteration += 1
             }
         }
