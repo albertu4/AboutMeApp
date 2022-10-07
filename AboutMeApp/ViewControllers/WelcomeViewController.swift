@@ -28,6 +28,11 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "\(firstProfile.person.name) \(firstProfile.person.surname)"
+        pictureOfPage.layer.cornerRadius = 10
+        photoOfUser.layer.borderWidth = 3
+        photoOfUser.layer.borderColor = UIColor.lightGray.cgColor
+        
         pictureOfPage.image = UIImage(named: firstProfile.person.picture)
         photoOfUser.image = UIImage(named: firstProfile.person.photo)
         
@@ -42,11 +47,14 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        photoOfUser.layer.cornerRadius = photoOfUser.frame.height / 2
+        photoOfUser.layer.cornerRadius = photoOfUser.bounds.height / 2
     }
     
     @IBAction func editStatusOfUser(_ sender: Any) {
         showAlert(title: "Change status", and: "What do you feel?")
+    }
+    @IBAction func exitFromProfile(_ sender: Any) {
+        
     }
 }
 

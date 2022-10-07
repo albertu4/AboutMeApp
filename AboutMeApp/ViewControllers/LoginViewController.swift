@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     //MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
         usernameTF.text?.removeAll()
         passwordTF.text?.removeAll()
     }
-
+    
 }
 
 //MARK: - Navigation
@@ -63,13 +63,15 @@ extension LoginViewController {
         let tabBarController = segue.destination as! UITabBarController
         
         for viewController in tabBarController.children {
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.firstProfile = firstProfile
-            } else if let navigationVC =
-                        viewController as? UINavigationController {
+            if let navigationVC =
+                viewController as? UINavigationController {
                 
-                if let aboutMeVC =
-                    navigationVC.topViewController as? AboutMeViewController {
+                if let welcomeVC = navigationVC.topViewController as? WelcomeViewController {
+                    welcomeVC.firstProfile = firstProfile
+                }
+                
+                else if let aboutMeVC =
+                            navigationVC.topViewController as? AboutMeViewController {
                     aboutMeVC.firstProfile = firstProfile
                 } else if let pictureVC =
                             navigationVC.topViewController as? PictureViewController {

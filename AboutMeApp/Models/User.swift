@@ -24,7 +24,8 @@ struct User {
                 education: "Empire State University",
                 job: "Daily Bugle",
                 photo: "peterParker",
-                picture: "spiderManLogo"
+                picture: "spiderManLogo",
+                photoAlbum: ["0", "1", "2", "3"]
             )
         )
     }
@@ -41,4 +42,5 @@ struct Person {
     let job: String
     let photo: String
     let picture: String
+    let photoAlbum: [String]
 }

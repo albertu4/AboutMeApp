@@ -9,18 +9,20 @@ import UIKit
 
 class PictureViewController: UIViewController {
     
-    @IBOutlet var firstPicture: UIImageView!
-    @IBOutlet var secondPicture: UIImageView!
-    @IBOutlet var thirdPicture: UIImageView!
+    @IBOutlet weak var stackOfImage: UIStackView!
     
     var firstProfile: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\(firstProfile.person.name) \(firstProfile.person.surname)"
-//        
-//        firstPicture.image = firstProfile.person.pictures[0]
-//        secondPicture.image = firstProfile.person.pictures[1]
-//        thirdPicture.image = firstProfile.person.pictures[2]
+        
+        var iteration = 0
+        for image in stackOfImage.arrangedSubviews {
+            if let photo = image as? UIImageView {
+                photo.image = UIImage(named: firstProfile.person.photoAlbum[iteration])
+                iteration += 1
+            }
+        }
     }
 }
