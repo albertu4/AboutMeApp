@@ -15,7 +15,8 @@ class PictureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(profile.person.name) \(profile.person.surname)"
+        
+        title = "Photo Album"
         
         var iteration = 0
         for image in stackOfImage.arrangedSubviews {

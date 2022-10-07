@@ -13,7 +13,7 @@ struct User {
     static func getPersonInfo() -> User {
         User(
             login: "User",
-            password: "123",
+            password: "12345678",
             person: Person(
                 name: "Peter",
                 surname: "Parker",

@@ -17,16 +17,16 @@ class LoginViewController: UIViewController {
     private let profile = User.getPersonInfo()
     
     private let primaryColor = UIColor(
-        red: 107/255,
-        green: 148/255,
-        blue: 220/255,
+        red: 241/255,
+        green: 157/255,
+        blue: 202/255,
         alpha: 1
     )
     
     private let secondaryColor = UIColor(
-        red: 30/255,
-        green: 40/255,
-        blue: 60/255,
+        red: 116/255,
+        green: 196/255,
+        blue: 245/255,
         alpha: 1
     )
     

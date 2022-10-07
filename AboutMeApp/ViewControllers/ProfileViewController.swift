@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "\(profile.person.name) \(profile.person.surname)"
+        title = "Account"
         pictureOfPage.layer.cornerRadius = 10
         photoOfUser.layer.borderWidth = 3
         photoOfUser.layer.borderColor = UIColor.lightGray.cgColor
